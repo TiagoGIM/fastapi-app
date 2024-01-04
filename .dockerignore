@@ -1,0 +1,28 @@
+# Arquivos e diretórios gerados localmente
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+# Ambiente virtual (se estiver usando virtualenv ou venv)
+venv/
+env/
+*.env
+
+# Arquivos específicos do sistema operacional e logs
+.DS_Store
+Thumbs.db
+*.log
+
+# Arquivos de configuração local
+.env
+.env.local
+.env.*.local
+
+# Arquivos de configuração específicos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de saída de ferramentas
+.idea/
