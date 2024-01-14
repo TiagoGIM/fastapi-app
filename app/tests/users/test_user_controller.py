@@ -33,13 +33,15 @@ def test_create_user():
 
 def test_update_user(mock_user_service):
 
-    mock_user_service.update_user = {"username": "updateduser"}
-
     user_data = {
         "username": "updateduser",
         "password": "updatedpassword",
         "email": "1231"
     }
+
+    mock_user_service.update_user = user_data
+
+
     response = client.put("api/users/1", json=user_data)
 
     # Verificar as asserções
