@@ -19,3 +19,15 @@ jobs:
 
     - name: Run tests
       run: docker run unit-test
+    
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Trigger Deploy Webhook
+        run: |
+          # Substitua este comando pelo seu comando de deploy usando a URL do webhook
+          curl -X POST -d {} ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        env:
+          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
