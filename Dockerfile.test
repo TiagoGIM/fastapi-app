@@ -11,7 +11,7 @@ RUN pip install --no-cache-dir -r  /code/requirements.txt
 
 COPY ./app /code/app
 
-ENV ENVIRONMENT=TEST
+# ENV ENVIRONMENT=TEST
 
 CMD ["python","-m","pytest","app/tests"]
 # CMD ["pytest","app/tests"]
