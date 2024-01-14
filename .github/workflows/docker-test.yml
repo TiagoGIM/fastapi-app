@@ -2,22 +2,21 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "tests" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "tests" ]
 
 jobs:
 
-  build:
-
+  test:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
-    - uses: actions/checkout@v3
+      uses: actions/checkout@v3
     
     - name: Build the Docker image
-      run: docker build . --file Dockerfile.test --tag unit-test:$(date +%s)
+      run: docker build -t unit-test --file Dockerfile.test .
 
     - name: Run tests
       run: docker run unit-test
