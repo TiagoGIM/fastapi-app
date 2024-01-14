@@ -1,5 +1,6 @@
 # Arquivos e diretórios gerados localmente
 __pycache__/
+.pytest_cache
 *.pyc
 *.pyo
 *.pyd
@@ -37,3 +38,5 @@ __pycache__/
 *.pyo
 *.pyd
 *.db
+
+.gitignore
