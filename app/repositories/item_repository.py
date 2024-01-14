@@ -1,4 +1,4 @@
-from app.model.item import Item
+from ..model.item import Item
 
 class ItemRepository:
     items = []

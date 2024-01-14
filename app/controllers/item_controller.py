@@ -1,8 +1,11 @@
 from fastapi import APIRouter, HTTPException
-from app.services.item_service import ItemService
-from app.model.item import Item
+from ..services.item_service import ItemService
+from ..model.item import Item
 
-router = APIRouter()
+router = APIRouter(
+    prefix="/items",
+    tags=["items"]
+)
 item_service = ItemService()
 
 @router.post("/items/")

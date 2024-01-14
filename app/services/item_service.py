@@ -1,5 +1,5 @@
-from app.repositories.item_repository import ItemRepository
-from app.model.item import Item
+from ..repositories.item_repository import ItemRepository
+from ..model.item import Item
 
 class ItemService:
     def __init__(self):
